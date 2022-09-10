@@ -63,7 +63,6 @@ int main() {
 
         printf("What is the publication year?\n");
         scanf("%u", &pubYear1);
-        getchar();
 
         if ((pubYear1 < MIN_YEAR) || (pubYear1 > MAX_YEAR)) {
           printf("Publication year must be between 1475 and 2022\n");
@@ -117,7 +116,6 @@ int main() {
 
         printf("What is the publication year?\n");
         scanf("%u", &pubYear2);
-        getchar();
 
         if ((pubYear2 < MIN_YEAR) || (pubYear2 > MAX_YEAR)) {
           printf("Publication year must be between 1475 and 2022\n");
@@ -144,6 +142,7 @@ int main() {
       memset(buffer, '\0', ERROR_TRAP_BUFFER);
       break;
       //////////////////////////////////////////////////////////////////
+
     case 2:
 
       /////////// AUTHOR NAME /////////////////
@@ -170,7 +169,7 @@ int main() {
 
         printf("What is the publication year?\n");
         scanf("%u", &pubYear3);
-      getchar();
+
         if ((pubYear3 < MIN_YEAR) || (pubYear3 > MAX_YEAR)) {
           printf("Publication year must be between 1475 and 2022\n");
           isGood = true;
@@ -202,9 +201,9 @@ int main() {
     }
 
     /////////////////// END SWITCH /////////////////////////
-
-    goNoGo=true;
-       counter++;
+    counter++;
+    goNo=true;
+    
     if (counter < MAX_COUNTER) {
       printf("\n The counter is: %d\n", counter);
       printf("Would you like to comtinue?\n Y/N\n");
@@ -213,38 +212,15 @@ int main() {
       char ans = toupper(buffer[0]);
       if (ans != 'Y'){
         goNoGo=false;
-        for (i=0; i<counter; i++){
-          switch(i){
-            case 0;
-            printf("You have entered Author Name: %s\n Publication Year: %u")
-          }
-        }
-        }
-    
-     
-  
+      }
+      printf("You entered %c\n", ans);
+ 
       
     }
 
   } while ((counter < MAX_COUNTER) && (goNoGo==true));
 
-   
-    /*   switch (counter){
-           case 1:
-         printf("You entered:\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName1,pubYear1,pubCity1);
-          break;
-         
-          case 2:
-         printf("You entered:\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName2,pubYear2,pubCity2);
-          break;
-         
-         default:
-         printf("No more!");
-      
-       } */
-
-        
-      
+  printf("")
 
   return 0;
 }
