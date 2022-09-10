@@ -10,6 +10,7 @@
 #define CITY_CHAR_LIMIT 64
 #define MAX_COUNTER 3
 
+// HEADERS //
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -18,14 +19,19 @@
 
 // buffer //
 char buffer[ERROR_TRAP_BUFFER];
-// global variables //
-char authorName1[AUTHOR_CHAR_LIMIT], authorName2[AUTHOR_CHAR_LIMIT],
-    authorName3[AUTHOR_CHAR_LIMIT];
 
+// global variables:
+
+// Author Name //
+char authorName1[AUTHOR_CHAR_LIMIT], authorName2[AUTHOR_CHAR_LIMIT], authorName3[AUTHOR_CHAR_LIMIT];
+//Publicatiuon Year
+unsigned int pubYear1, pubYear2, pubYear3;
+
+// global variables //
 char pubCity1[CITY_CHAR_LIMIT], pubCity2[CITY_CHAR_LIMIT],
     pubCity3[CITY_CHAR_LIMIT];
 
-unsigned int pubYear1, pubYear2, pubYear3;
+
  
 int main() {
 
@@ -206,17 +212,28 @@ int main() {
     goNoGo=true;
        counter++;
     if (counter < MAX_COUNTER) {
-      printf("\n The counter is: %d\n", counter);
+      
       printf("Would you like to comtinue?\n Y/N\n");
       scanf("%s", buffer);
       getchar();
       char ans = toupper(buffer[0]);
       if (ans != 'Y'){
         goNoGo=false;
-        for (i=0; i<counter; i++){
+        
+        for (int i=0; i<counter; i++){
+          
           switch(i){
-            case 0;
-            printf("You have entered Author Name: %s\n Publication Year: %u")
+            
+            case 0:
+  printf("Book 1:\n Author Name: %s\n Publication Year: %u \n Publication City: %s\n",authorName1, pubYear1, pubCity1);
+              break;
+            
+               case 1:
+  printf("\n Book 2:\n Author Name: %s\n Publication Year: %u \n Publication City: %s",authorName2, pubYear2, pubCity2);
+              break;
+            
+               default:
+         printf("No more!");
           }
         }
         }
@@ -228,22 +245,15 @@ int main() {
 
   } while ((counter < MAX_COUNTER) && (goNoGo==true));
 
-   
-    /*   switch (counter){
-           case 1:
-         printf("You entered:\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName1,pubYear1,pubCity1);
-          break;
-         
-          case 2:
-         printf("You entered:\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName2,pubYear2,pubCity2);
-          break;
-         
-         default:
-         printf("No more!");
+    if (counter == MAX_COUNTER){
+      printf("Book 1:\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName1,pubYear1,pubCity1);
       
-       } */
+            printf(" \nBook 2\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName2,pubYear2,pubCity2);
 
-        
+           printf("\nBook 3:\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName3,pubYear3,pubCity3);
+    }
+
+  
       
 
   return 0;
