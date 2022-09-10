@@ -27,7 +27,7 @@ char authorName1[AUTHOR_CHAR_LIMIT], authorName2[AUTHOR_CHAR_LIMIT], authorName3
 //Publicatiuon Year
 unsigned int pubYear1, pubYear2, pubYear3;
 
-// global variables //
+// Publication City //
 char pubCity1[CITY_CHAR_LIMIT], pubCity2[CITY_CHAR_LIMIT],
     pubCity3[CITY_CHAR_LIMIT];
 
@@ -35,17 +35,21 @@ char pubCity1[CITY_CHAR_LIMIT], pubCity2[CITY_CHAR_LIMIT],
  
 int main() {
 
-  // main boolean variable for do while loop //
+  // initialize counter for switch statement //
   int counter = 0;
+  // main boolean variable for do while loop //
   bool isGood;
+  // boolean to end main do while
     bool goNoGo;
 
+  // Main do while
   do {
 
     switch (counter) {
 
     case 0:
-      /////////// AUTHOR NAME /////////////////
+      
+      /////////// AUTHOR NAME 1 /////////////////
       do {
 
         isGood = false;
@@ -63,7 +67,7 @@ int main() {
       strcpy(authorName1, buffer);
       memset(buffer, '\0', ERROR_TRAP_BUFFER);
 
-      ///////////// PUBLICATION YEAR //////////////////////
+      ///////////// PUBLICATION YEAR 1 //////////////////////
       do {
         isGood = false;
 
@@ -78,7 +82,7 @@ int main() {
 
       } while (isGood);
 
-      /////////// PUBLICATION CITY //////////////////////
+      /////////// PUBLICATION CITY 1 //////////////////////
       do {
         isGood = false;
 
@@ -99,7 +103,7 @@ int main() {
       ///////////////////////////////////////////////////////////
 
     case 1:
-      /////////// AUTHOR NAME /////////////////
+      /////////// AUTHOR NAME 2 /////////////////
       do {
 
         isGood = false;
@@ -117,7 +121,7 @@ int main() {
       strcpy(authorName2, buffer);
       memset(buffer, '\0', ERROR_TRAP_BUFFER);
 
-      ///////////// PUBLICATION YEAR //////////////////////
+      ///////////// PUBLICATION YEAR 2 //////////////////////
       do {
         isGood = false;
 
@@ -132,7 +136,7 @@ int main() {
 
       } while (isGood);
 
-      /////////// PUBLICATION CITY //////////////////////
+      /////////// PUBLICATION CITY 2 //////////////////////
       do {
         isGood = false;
 
@@ -149,10 +153,10 @@ int main() {
       strcpy(pubCity2, buffer);
       memset(buffer, '\0', ERROR_TRAP_BUFFER);
       break;
-      //////////////////////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////
     case 2:
 
-      /////////// AUTHOR NAME /////////////////
+      /////////// AUTHOR NAME 3 /////////////////
       do {
 
         isGood = false;
@@ -170,7 +174,7 @@ int main() {
       strcpy(authorName3, buffer);
       memset(buffer, '\0', ERROR_TRAP_BUFFER);
 
-      ///////////// PUBLICATION YEAR //////////////////////
+      ///////////// PUBLICATION YEAR 3 //////////////////////
       do {
         isGood = false;
 
@@ -184,7 +188,7 @@ int main() {
 
       } while (isGood);
 
-      /////////// PUBLICATION CITY //////////////////////
+      /////////// PUBLICATION CITY 3 //////////////////////
       do {
         isGood = false;
 
@@ -219,7 +223,7 @@ int main() {
       char ans = toupper(buffer[0]);
       if (ans != 'Y'){
         goNoGo=false;
-        
+
         for (int i=0; i<counter; i++){
           
           switch(i){
