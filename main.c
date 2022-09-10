@@ -250,11 +250,11 @@ int main() {
   } while ((counter < MAX_COUNTER) && (goNoGo==true));
 
     if (counter == MAX_COUNTER){
-      printf("Book 1:\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName1,pubYear1,pubCity1);
+      printf("Book 1:\n Author Name:%s\n Publication Year %u\n Publication City %s \n",authorName1,pubYear1,pubCity1);
       
-            printf(" \nBook 2\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName2,pubYear2,pubCity2);
+            printf(" \nBook 2\n Author Name:%s\n Publication Year %u\n Publication City %s \n",authorName2,pubYear2,pubCity2);
 
-           printf("\nBook 3:\n Author Name:%s\n Publiucation Year %u\n Publication City %s \n",authorName3,pubYear3,pubCity3);
+           printf("\nBook 3:\n Author Name:%s\n Publication Year %u\n Publication City %s \n",authorName3,pubYear3,pubCity3);
     }
 
   
