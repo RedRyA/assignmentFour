@@ -36,13 +36,10 @@ int main() {
 
   // main boolean variable for do while loop //
   bool isGood;
-  // boolean to end main do while
- 
-
-  // Main do while
+  
   int idx=0;
   for(;idx <= MAX_COUNTER;idx++){
- printf("%d \n",idx );
+
 
       do {
 
@@ -76,7 +73,6 @@ int main() {
         }
 
       } while (isGood);
-
       /////////// PUBLICATION CITY //////////////////////
       do {
         isGood = false;
@@ -108,8 +104,8 @@ int main() {
         }
     
   int i;
-        for (int i =0; i <= MAX_COUNTER; i++){
-          printf("Author's Last Name: %s\n Publication Year %u\n Publication City %s\n",authorName[i],pubYear[i],pubCity[i]);
+        for (int i =0; i <= idx; i++){
+          printf("\nAuthor's Last Name:%s \nPublication Year %u \nPublication City %s\n",authorName[i],pubYear[i],pubCity[i]);
          
           }
  
